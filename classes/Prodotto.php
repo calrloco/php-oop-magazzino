@@ -2,12 +2,12 @@
 
 class Prodotto {
     private int $quantita;
-    private string $id;
     private string $categoria;
-    private string $forntore;
+    private string $fornitore;
     private string $descrizone;
     private float $prezzoAquisto;
     private float $prezzoVendita;
+    private $possibiliCtagorie = ['laptop','pc'];
     /// costruttore classe prodotto///////
     public function __construct(
     $quantita, 
@@ -19,27 +19,27 @@ class Prodotto {
           $this->quantita = $quantita;
           $this->categoria = $categoria;
           $this->fornitore = $fornitore;
-          $this->descrizone = $descrizione;
+          $this->descrizone = $descrizone;
           $this->prezzoAquisto = $prezzoAquisto;
           $this->prezzoVendita = $prezzoVendita;
     }
     ///// getters /////////////////////////
-    public function getQuantita($quantita){
+    public function getQuantita(){
         return $this->quantita;
     }
-    public function getCategoria($quantita){
+    public function getCategoria(){
         return $this->categoria;
     }
-    public function getFornitore($quantita){
+    public function getFornitore(){
         return $this->fornitore;
     }
-    public function getDescrizione($quantita){
-        return $this->descrizione;
+    public function getDescrizione(){
+        return $this->descrizone;
     }
-    public function getPrezzoAcquisto($quantita){
+    public function getPrezzoAcquisto(){
         return $this->prezzoAquisto;
     }
-    public function getPrezzoVendita($quantita){
+    public function getPrezzoVendita(){
         return $this->prezzoVendita;
     }
     //// setter ///////////////////////////
@@ -51,20 +51,39 @@ class Prodotto {
     }
     }
     public function setCategoria($categoria){
+        if(in_array(strtolower($categoria),$possibiliCtagorie)){
         $this->categoria = $categoria;
+    }else{
+        die("Categoria non Riconosciuta");
+    }
     }
     public function setFornitore($fornitore){
+        if(strlen($fornitore)>3){
         $this->forntore = $fornitore;
+       }else{
+           die("Fornitore non valido");
+       }
     }
-    public function setDescrizione($descrizione){
-        $this->descrizione = $descrizione;
+    public function setDescrizione($descrizone){
+        if(strlen($descrizone)> 6){
+        $this->descrizone = $descrizone;
+    }else{
+        die("Descrizione non valida");
+    }
     }
     public function setPrezzoAcquisto($prezzoAquisto){
-         $this->setQuantitaprezzoAquisto = $prezzoAquisto;
+        if($prezzoAquisto >= 200){
+         $this->prezzoAquisto = $prezzoAquisto;
+        }else{
+            die("Prezzo Acquisto non valido");
+        }
     }
     public function setPrezzoVendita($prezzoVendita){
-        $this->prezzoVendita = $prezzoVendita;
+        if($prezzoAquisto >= 200){
+            $this->prezzoVendita = $prezzoAquisto;
+           }else{
+               die("Prezzo Vendita non valido");
+           }
     }
 }
-
 ?>
