@@ -1,17 +1,18 @@
 <?php
 require_once "Prodotto.php";
 /////classe computer possono essere create istanze di laptop o desktop
-class Computer extends Prodotto {
-    
+class Computer extends Prodotto
+{
+
     private string $type;
     private string $sistemaOperativo;
     private string $storage;
     private string $monitor;
     private string $processor;
-   
+
 
     public function __construct(
-        $quantita, 
+        $quantita,
         $categoria,
         $fornitore,
         $descrizone,
@@ -22,7 +23,7 @@ class Computer extends Prodotto {
         $storage,
         $monitor,
         $processor
-        
+
     ) {
         $this->type = $type;
         $this->sistemaOperativo = $sistemaOperativo;
@@ -30,12 +31,13 @@ class Computer extends Prodotto {
         $this->monitor = $monitor;
         $this->processor = $processor;
         parent::__construct(
-        $quantita, 
-        $categoria,
-        $fornitore,
-        $descrizone,
-        $prezzoAquisto,
-        $prezzoVendita);
+            $quantita,
+            $categoria,
+            $fornitore,
+            $descrizone,
+            $prezzoAquisto,
+            $prezzoVendita
+        );
     }
     ///getters////////////////////////////////
     public function getType($type)
@@ -46,35 +48,51 @@ class Computer extends Prodotto {
     {
         return $this->sistemaOperativo = $sistemaOperativo;
     }
-    public function getStorage($storage){
+    public function getStorage($storage)
+    {
         return $this->storage = $storage;
     }
-    public function getMonitor($monitor){
+    public function getMonitor($monitor)
+    {
         return $this->monitor = $monitor;
     }
-    public function getProcessor($processor){
+    public function getProcessor($processor)
+    {
         return $this->processor = $processor;
     }
     /////setters////////////////////////////////
-    public function setType($type){
-        $this->type = $type;
+    public function setType($type)
+    {
+        $tipi = ['gaming', 'editing', 'notebook', 'low specs'];
+        if (in_array($type, $tipi)) {
+            $this->type = $type;
+        } else {
+            die('Unknown type');
+        }
     }
-    public function setSistemaOperativo($sitemOperativo){
-        $sistemiOperativi = ['windows','macOS'];
-        if(in_array($sitemOperativo,$sistemiOperativi)){
+    public function setSistemaOperativo($sitemOperativo)
+    {
+        $sistemiOperativi = ['windows', 'macos'];
+        if (in_array(strtolower($sitemOperativo), $sistemiOperativi)) {
             $this->sistemaOperativo = $sitemOperativo;
-        }else{
+        } else {
             die("Sistema Operativo Non riconosciuto");
         }
-         
     }
-    public function setStorage($storage){
-        $this->storage = $storage;
+    public function setStorage($storage)
+    {
+        if (!empty($storage)) {
+            $this->storage = $storage;
+        }else{
+            die("Storage non specificato");
+        }
     }
-    public function setMonitor($monitor){
+    public function setMonitor($monitor)
+    {
         $this->monitor = $monitor;
     }
-    public function setProcessor($processor){
+    public function setProcessor($processor)
+    {
         $this->processor = $processor;
     }
 }
