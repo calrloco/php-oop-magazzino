@@ -81,7 +81,7 @@ class Prodotto {
     }
     public function setPrezzoVendita($prezzoVendita){
         if($prezzoAquisto >= 200){
-            $this->prezzoVendita = $prezzoAquisto;
+            $this->prezzoVendita = $prezzoVendita;
            }else{
                die("Prezzo Vendita non valido");
            }
