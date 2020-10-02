@@ -1,6 +1,6 @@
 <?php
 require_once "Prodotto.php";
-
+/////classe computer possono essere create istanze di laptop o desktop
 class Computer extends Prodotto {
     
     private string $type;
