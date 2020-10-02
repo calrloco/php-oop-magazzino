@@ -7,7 +7,7 @@ class Prodotto {
     private string $descrizone;
     private float $prezzoAquisto;
     private float $prezzoVendita;
-    private $possibiliCtagorie = ['laptop','pc'];
+   
     /// costruttore classe prodotto///////
     public function __construct(
     $quantita, 
@@ -51,6 +51,7 @@ class Prodotto {
     }
     }
     public function setCategoria($categoria){
+        $possibiliCtagorie = ['laptop','pc'];
         if(in_array(strtolower($categoria),$possibiliCtagorie)){
         $this->categoria = $categoria;
     }else{

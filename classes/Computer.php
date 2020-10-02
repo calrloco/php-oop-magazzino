@@ -8,6 +8,7 @@ class Computer extends Prodotto {
     private string $storage;
     private string $monitor;
     private string $processor;
+   
 
     public function __construct(
         $quantita, 
@@ -59,7 +60,13 @@ class Computer extends Prodotto {
         $this->type = $type;
     }
     public function setSistemaOperativo($sitemOperativo){
-         $this->sistemaOperativo = $sitemOperativo;
+        $sistemiOperativi = ['windows','macOS'];
+        if(in_array($sitemOperativo,$sistemiOperativi)){
+            $this->sistemaOperativo = $sitemOperativo;
+        }else{
+            die("Sistema Operativo Non riconosciuto");
+        }
+         
     }
     public function setStorage($storage){
         $this->storage = $storage;
