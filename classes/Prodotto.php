@@ -1,11 +1,11 @@
-<?
+<?php
 
 class Prodotto {
     private int $quantita;
     private string $categoria;
     private string $fornitore;
     private string $descrizone;
-    private float $prezzoAquisto;
+    private float $prezzoAcquisto;
     private float $prezzoVendita;
    
     /// costruttore classe prodotto///////
@@ -20,7 +20,7 @@ class Prodotto {
           $this->categoria = $categoria;
           $this->fornitore = $fornitore;
           $this->descrizone = $descrizone;
-          $this->prezzoAquisto = $prezzoAquisto;
+          $this->prezzoAcquisto = $prezzoAquisto;
           $this->prezzoVendita = $prezzoVendita;
     }
     ///// getters /////////////////////////
@@ -37,7 +37,7 @@ class Prodotto {
         return $this->descrizone;
     }
     public function getPrezzoAcquisto(){
-        return $this->prezzoAquisto;
+        return $this->prezzoAcquisto;
     }
     public function getPrezzoVendita(){
         return $this->prezzoVendita;
@@ -72,15 +72,15 @@ class Prodotto {
         die("Descrizione non valida");
     }
     }
-    public function setPrezzoAcquisto($prezzoAquisto){
-        if($prezzoAquisto >= 200){
-         $this->prezzoAquisto = $prezzoAquisto;
+    public function setPrezzoAcquisto($prezzoAcquisto){
+        if($prezzoAcquisto >= 200){
+         $this->prezzoAcquisto = $prezzoAcquisto;
         }else{
             die("Prezzo Acquisto non valido");
         }
     }
     public function setPrezzoVendita($prezzoVendita){
-        if($prezzoAquisto >= 200){
+        if($prezzoVendita >= 200){
             $this->prezzoVendita = $prezzoVendita;
            }else{
                die("Prezzo Vendita non valido");
