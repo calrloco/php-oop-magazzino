@@ -51,12 +51,8 @@ class Prodotto {
     }
     }
     public function setCategoria($categoria){
-        $possibiliCtagorie = ['laptop','pc'];
-        if(in_array(strtolower($categoria),$possibiliCtagorie)){
-        $this->categoria = $categoria;
-    }else{
-        die("Categoria non Riconosciuta");
-    }
+            $this->categoria = $categoria;
+   
     }
     public function setFornitore($fornitore){
         if(strlen($fornitore)>3){
@@ -80,11 +76,10 @@ class Prodotto {
         }
     }
     public function setPrezzoVendita($prezzoVendita){
-        if($prezzoVendita >= 200){
+        if(!empty($prezzoVendita)){
             $this->prezzoVendita = $prezzoVendita;
            }else{
                die("Prezzo Vendita non valido");
            }
     }
 }
-?>

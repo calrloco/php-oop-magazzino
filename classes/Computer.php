@@ -10,7 +10,7 @@ class Computer extends Prodotto
     private string $monitor;
     private string $processor;
 
-
+    //////function costruttore//////////////
     public function __construct(
         $quantita,
         $categoria,
