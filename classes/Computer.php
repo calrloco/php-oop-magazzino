@@ -16,7 +16,7 @@ class Computer extends Prodotto
         $categoria,
         $fornitore,
         $descrizone,
-        $prezzoAquisto,
+        $prezzoAcquisto,
         $prezzoVendita,
         $type,
         $sistemaOperativo,
@@ -35,7 +35,7 @@ class Computer extends Prodotto
             $categoria,
             $fornitore,
             $descrizone,
-            $prezzoAquisto,
+            $prezzoAcquisto,
             $prezzoVendita
         );
     }

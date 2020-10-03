@@ -14,13 +14,13 @@ class Prodotto {
     $categoria,
     $fornitore,
     $descrizone,
-    $prezzoAquisto,
+    $prezzoAcquisto,
     $prezzoVendita){
           $this->quantita = $quantita;
           $this->categoria = $categoria;
           $this->fornitore = $fornitore;
           $this->descrizone = $descrizone;
-          $this->prezzoAcquisto = $prezzoAquisto;
+          $this->prezzoAcquisto = $prezzoAcquisto;
           $this->prezzoVendita = $prezzoVendita;
     }
     ///// getters /////////////////////////
@@ -69,7 +69,7 @@ class Prodotto {
     }
     }
     public function setPrezzoAcquisto($prezzoAcquisto){
-        if($prezzoAcquisto >= 200){
+        if($prezzoAcquisto >= 200.00){
          $this->prezzoAcquisto = $prezzoAcquisto;
         }else{
             die("Prezzo Acquisto non valido");

@@ -16,8 +16,9 @@ class Monitor extends Periferiche
         $categoria,
         $fornitore,
         $descrizone,
-        $prezzoAquisto,
-        $prezzoVendita
+        $prezzoAcquisto,
+        $prezzoVendita,
+        $bluetooth
     ) {
         $this->pollici = $pollici;
         $this->apectRatio = $apectRatio;
@@ -28,8 +29,9 @@ class Monitor extends Periferiche
             $categoria,
             $fornitore,
             $descrizone,
-            $prezzoAquisto,
-            $prezzoVendita
+            $prezzoAcquisto,
+            $prezzoVendita,
+            $bluetooth
         );
     }
     ////getters /////////////////////////
