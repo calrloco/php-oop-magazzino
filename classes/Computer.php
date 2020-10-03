@@ -95,4 +95,15 @@ class Computer extends Prodotto
     {
         $this->processor = $processor;
     }
+    ////override setcategoria di prodotto////////////
+    public function setCategoria($categoria)
+    {
+        $possibiCategorie = ['computer desktop', 'laptop',];
+        parent::setCategoria($categoria);
+        if (in_array($categoria = $categoria, $possibiCategorie)) {
+            $this->categoria = $categoria;
+        } else {
+            die('categoria non riconosciuta');
+        }
+    }
 }

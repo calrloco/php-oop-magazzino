@@ -31,9 +31,9 @@ class Periferiche extends Prodotto
     //// ovverride del metodo setcategoria
     public function setCategoria($categoria)
     {
-        $possibiCaregorie = ['casse', 'cuffie', 'microfoni', 'mouse', 'tastiera', 'monitor'];
+        $possibiCategorie = ['casse', 'cuffie', 'microfoni', 'mouse', 'tastiera', 'monitor'];
         parent::setCategoria($categoria);
-        if (in_array($categoria = $categoria, $possibiCaregorie)) {
+        if (in_array($categoria = $categoria, $possibiCategorie)) {
             $this->categoria = $categoria;
         } else {
             die('categoria non riconosciuta');

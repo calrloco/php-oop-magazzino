@@ -69,7 +69,7 @@ class Prodotto {
     }
     }
     public function setPrezzoAcquisto($prezzoAcquisto){
-        if($prezzoAcquisto >= 200.00){
+        if(!empty($prezzoAcquisto)){
          $this->prezzoAcquisto = $prezzoAcquisto;
         }else{
             die("Prezzo Acquisto non valido");
