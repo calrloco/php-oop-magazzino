@@ -12,8 +12,9 @@ class Tastiera extends Periferiche
         $categoria,
         $fornitore,
         $descrizone,
-        $prezzoAquisto,
+        $prezzoAcquisto,
         $prezzoVendita,
+        $totaleVenduti,
         $bluetooth
     ) {
         $this->tipoTastiera = $tipoTastiera;
@@ -24,8 +25,9 @@ class Tastiera extends Periferiche
             $categoria,
             $fornitore,
             $descrizone,
-            $prezzoAquisto,
+            $prezzoAcquisto,
             $prezzoVendita,
+            $totaleVenduti,
             $bluetooth
         );
     }

@@ -18,6 +18,7 @@ class Computer extends Prodotto
         $descrizone,
         $prezzoAcquisto,
         $prezzoVendita,
+        $totaleVenduti,
         $type,
         $sistemaOperativo,
         $storage,
@@ -36,7 +37,9 @@ class Computer extends Prodotto
             $fornitore,
             $descrizone,
             $prezzoAcquisto,
-            $prezzoVendita
+            $prezzoVendita,
+            $totaleVenduti
+
         );
     }
     ///getters////////////////////////////////
@@ -83,7 +86,7 @@ class Computer extends Prodotto
     {
         if (!empty($storage)) {
             $this->storage = $storage;
-        }else{
+        } else {
             die("Storage non specificato");
         }
     }

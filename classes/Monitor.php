@@ -18,6 +18,7 @@ class Monitor extends Periferiche
         $descrizone,
         $prezzoAcquisto,
         $prezzoVendita,
+        $totaleVenduti,
         $bluetooth
     ) {
         $this->pollici = $pollici;
@@ -31,6 +32,7 @@ class Monitor extends Periferiche
             $descrizone,
             $prezzoAcquisto,
             $prezzoVendita,
+            $totaleVenduti,
             $bluetooth
         );
     }

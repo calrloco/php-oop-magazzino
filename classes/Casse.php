@@ -14,6 +14,7 @@ class Cassa extends Periferiche
         $descrizone,
         $prezzoAcquisto,
         $prezzoVendita,
+        $totaleVenduti,
         $bluetooth
     ) {
       $this->frequency = $frequency;
@@ -26,6 +27,7 @@ class Cassa extends Periferiche
             $descrizone,
             $prezzoAcquisto,
             $prezzoVendita,
+            $totaleVenduti,
             $bluetooth
         );
     }

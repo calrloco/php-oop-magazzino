@@ -16,7 +16,8 @@ class Mouse extends Periferiche
         $descrizone,
         $prezzoAcquisto,
         $prezzoVendita,
-        $bluetooth
+        $bluetooth,
+        $totaleVenduti
     ) {
         $this->dpi = $dpi;
         $this->pulsantiProgram = $pulsantiProgrammabili;
@@ -29,7 +30,9 @@ class Mouse extends Periferiche
             $descrizone,
             $prezzoAcquisto,
             $prezzoVendita,
+            $totaleVenduti,
             $bluetooth
+            
         );
     }
     public function getDpid()

@@ -10,8 +10,9 @@ class Periferiche extends Prodotto
         $categoria,
         $fornitore,
         $descrizone,
-        $prezzoAquisto,
+        $prezzoAcquisto,
         $prezzoVendita,
+        $totaleVenduti,
         $bluetooth
     ) {
         $this->bluetooth = $bluetooth;
@@ -20,8 +21,9 @@ class Periferiche extends Prodotto
             $categoria,
             $fornitore,
             $descrizone,
-            $prezzoAquisto,
-            $prezzoVendita
+            $prezzoAcquisto,
+            $prezzoVendita,
+            $totaleVenduti
         );
     }
     /////////setter //////////
