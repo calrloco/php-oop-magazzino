@@ -97,7 +97,7 @@ class Prodotto
             die("Prezzo Vendita non valido");
         }
     }
-    public function setVendita($vendita)
+    public function Vendita($vendita)
     {
         if ($vendita >= 1) {
             $this->quantita -= $vendita;
